@@ -57,7 +57,8 @@ document.getElementById('button').addEventListener('click', () => {
             throw new Error('Network response was not OK');
         }
         // After clearing file content, change html to display "No container alerts"
-        document.querySelector('.file-content').innerHTML = "No container alerts";
+        fetchNewestFile();
+        return response.text();
     })
     .then(data => {
         console.log(data);

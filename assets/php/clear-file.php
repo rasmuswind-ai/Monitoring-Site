@@ -1,6 +1,6 @@
 <?php
 $fileDirectory = 'D:/Apache/Apache24/htdocs/assets/files/';
-$fileName = 'status_' . time() . '.txt'; // Appending current timestamp to file name for cache busting
+$fileName = 'status_' . exec('powershell [int](Get-Date -UFormat %s -Millisecond 0)') . '.txt'; // Appending current timestamp to file name for cache busting
 
 $filePath = $fileDirectory . $fileName;
 

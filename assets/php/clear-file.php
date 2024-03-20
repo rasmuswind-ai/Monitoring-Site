@@ -5,7 +5,7 @@ $fileName = 'status_' . exec('powershell [int](Get-Date -UFormat %s -Millisecond
 $filePath = $fileDirectory . $fileName;
 
 // Clear file content and rename
-if(file_put_contents($filePath, '') !== false) {
+if(file_put_contents($filePath, 'No container alerts') !== false) {
     echo "File content cleared successfully and renamed to $fileName";
 } else {
     echo "Error clearing file";

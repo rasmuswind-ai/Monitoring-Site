@@ -1,3 +1,10 @@
+// Hide clear button if specific text appears
+const fileContent = document.getElementById('file-content');
+if (fileContent && fileContent.textContent === 'No Container Alerts') {
+    // Hide button if above eq true
+    document.getElementById('button').style.display = 'none';
+}
+
 // Event listener for button click to clear file content
 document.getElementById('button').addEventListener('click', () => {
     fetch('http://<ip>/assets/php/clear-file.php', {

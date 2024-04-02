@@ -1,4 +1,11 @@
+// Hide clear button if specific text appears
+const fileContent = document.getElementById('file-content');
+if (fileContent && fileContent.textContent === 'No Container Alerts') {
+    // Hide button if above eq true
+    document.getElementById('button').style.display = 'none';
+}
 
+// Fetch newest file to bypass cache
 function fetchNewestFile() {
     fetch('http://<ip>/assets/php/fetchNewestFile.php')
         .then(response => {
